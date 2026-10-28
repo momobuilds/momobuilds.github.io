@@ -23,6 +23,7 @@ const ICONS = {
   code: '<path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/>',
   globe: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/>',
   bolt: '<path d="M13 2L4 14h7l-1 8 9-12h-7z"/>',
+  box: '<path d="M21 8l-9-5-9 5v8l9 5 9-5z"/><path d="M3 8l9 5 9-5M12 13v8"/>',
   car: '<path d="M3 16v-4l2-5h14l2 5v4z"/><circle cx="7" cy="16.5" r="2"/><circle cx="17" cy="16.5" r="2"/>',
 };
 const svg = (name, extra = "") =>
@@ -53,6 +54,9 @@ const EXPERIENCE = [
     points: ["Built a real-time two-antenna direction-of-arrival (DoA) estimation system using a PlutoSDR and a Raspberry Pi.",
       "Achieved an angle error below 0.1° in lab tests after hardware phase calibration.",
       "Developed a live Qt application to display direction estimates and automatically reject low-quality signals."] },
+  { icon: "box", grad: "g-sky", meta: "2026 – present · Milan", title: "Community Member", org: "Docker Community PoliMi",
+    teaser: "Member of the Docker student community at Politecnico di Milano.",
+    points: ["Member of Docker Community PoliMi, the student community around Docker and containerized development at Politecnico di Milano."] },
   { icon: "body", grad: "g-blue", meta: "02/2021 – 03/2024 · Mashhad", title: "Research Assistant", org: "FUM CARE, Ferdowsi University of Mashhad",
     teaser: "Wireless IMU motion capture and gait analysis for rehabilitation.",
     points: ["Developed a low-cost wireless motion-capture system with ICM-20948 9-axis IMUs, supporting configurable networks of 1–14 wearable nodes with ~4 h battery life.",
@@ -132,7 +136,7 @@ const SKILLS = [
   { icon: "chip", grad: "g-blue", title: "Embedded & edge AI", chips: ["STM32", "Zephyr RTOS", "ESP32", "Arduino", "Raspberry Pi", "FPGA", "HLS", "hls4ml", "Arm CryptoCell"] },
   { icon: "wave", grad: "g-rose", title: "Signal processing", chips: ["EMG", "PPG", "EDA", "IMU", "RF / SDR", "Sensor fusion"] },
   { icon: "neural", grad: "g-violet", title: "AI & ML", chips: ["PyTorch", "TensorFlow", "scikit-learn", "OpenCV"] },
-  { icon: "code", grad: "g-sky", title: "Programming", chips: ["C / C++", "Python", "MATLAB", "SQL", "Qt", "Streamlit"] },
+  { icon: "code", grad: "g-sky", title: "Programming", chips: ["C / C++", "Python", "MATLAB", "SQL", "Qt", "Streamlit", "Docker"] },
   { icon: "bolt", grad: "g-orange", title: "Hardware & tools", chips: ["Altium", "Fusion 360", "Git", "Linux", "pytest"] },
   { icon: "wifi", grad: "g-teal", title: "Protocols", chips: ["I2C", "SPI", "CAN", "UART", "USB", "BLE", "LoRa", "ZigBee", "MQTT", "TCP/UDP"] },
   { icon: "globe", grad: "g-orange", title: "Languages", chips: ["English · fluent", "Italian · A2", "Persian · native"] },

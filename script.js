@@ -32,58 +32,64 @@ const GH = "https://github.com/momobuilds/";
 
 // ---------- Content ----------
 const CASES = [
-  { icon: "glasses", grad: "g-violet", tag: "Wearable · 04/2026 – now", title: "InVox", sub: "Embedded Engineer · Biomedical and Data Science Association",
+  { icon: "glasses", grad: "g-violet", tag: "Student team · 04/2026 – now", title: "InVox", sub: "Embedded Engineer · Biomedical and Data Science Association, Politecnico di Milano",
     desc: "A silent-speech wearable hidden in ordinary eyeglass frames, designed for zero stigma and zero effort.",
-    points: ["Built the first data-acquisition prototype: 2 EMG sensors, 2 IMUs and an STM32 NUCLEO-U575ZI-Q."], link: GH + "InVox" },
-  { img: "assets/img/bea-band.webp", tag: "Wearable · 04/2026 – now", title: "BEA Band", sub: "Embedded Engineer · InVox Biomedical Association",
-    desc: "A screenless wearable watch that senses the body quietly in the background.",
-    points: ["Miniaturizing the prototype in Altium: heart-rate, temperature, IMU and sweat sensors on one small board."] },
+    points: ["Developed an STM32 NUCLEO-U575ZI-Q data-acquisition prototype integrating 2 EMG sensors and 2 IMUs.",
+      "Built an EMG/IMU signal-quality dashboard in Streamlit that checks each recording's timing, noise, clipping and SNR before use."], link: GH + "InVox" },
+  { img: "assets/img/bea-band.webp", tag: "Student team · 04/2026 – now", title: "BEA Band", sub: "Embedded Engineer · Biomedical Engineering Association, Politecnico di Milano",
+    desc: "A screenless wearable that senses the body quietly in the background. Above: the wristband enclosure I designed in Fusion 360.",
+    points: ["Miniaturizing the prototype on a custom Altium PCB with heart-rate, temperature, IMU and sweat sensors.",
+      "Designed the 3D wristband enclosure in Fusion 360."] },
 ];
 
 const EXPERIENCE = [
   { icon: "wave", grad: "g-orange", meta: "07/2026 – present · Milan", title: "Embedded Engineer Intern", org: "LWT3",
-    teaser: "Firmware validation and a real-time edge sEMG pipeline for the Wings system.",
-    points: ["Test and validate Wings firmware using the BTS FREEEMG 1000 as a reference.",
-      "Develop a real-time edge sEMG pipeline: band-pass and notch filtering, motion-artifact suppression, muscle-activation estimation and spectral analysis.",
-      "Develop a multimodal sensor-fusion pipeline (sEMG, heart rate, EDA, PPG) for fatigue prediction and physiological-state estimation."] },
-  { icon: "body", grad: "g-blue", meta: "02/2021 – 03/2024", title: "Research Assistant", org: "FUMCARE",
+    teaser: "Real-time edge sEMG processing, sensor fusion and hardware crypto on the Wings system.",
+    points: ["Develop real-time edge sEMG processing with band-pass/notch filtering, motion-artifact suppression and spectral analysis.",
+      "Develop a multimodal sensor-fusion pipeline combining sEMG, heart rate, EDA and PPG for fatigue prediction and physiological state estimation.",
+      "Enabled Arm CryptoCell hardware acceleration for AES, SHA and ECC, improving cryptographic performance and security on the embedded target."] },
+  { img: "assets/img/aoa.webp", meta: "02/2026 – 07/2026 · Milan", title: "Student Researcher", org: "RESTART Lab, Politecnico di Milano",
+    teaser: "Real-time direction-of-arrival estimation with a PlutoSDR and a Raspberry Pi.",
+    points: ["Built a real-time two-antenna direction-of-arrival (DoA) estimation system using a PlutoSDR and a Raspberry Pi.",
+      "Achieved an angle error below 0.1° in lab tests after hardware phase calibration.",
+      "Developed a live Qt application to display direction estimates and automatically reject low-quality signals."] },
+  { icon: "body", grad: "g-blue", meta: "02/2021 – 03/2024 · Mashhad", title: "Research Assistant", org: "FUM CARE, Ferdowsi University of Mashhad",
     teaser: "Wireless IMU motion capture and gait analysis for rehabilitation.",
-    points: ["Built a low-cost wireless 9-axis IMU motion-capture system with ICM-20948 sensors, supporting 1 to 14 wearable nodes and about 4 hours of battery life.",
-      "Validated a gait-event detection pipeline from a single lower-back IMU, with mean timing errors of 16–21 ms against instrumented insoles.",
-      "Trained a PyTorch CNN that classifies gait phases at about 85% mean accuracy across 14 participants.",
-      "Built a Python and Streamlit pipeline for IMU feature extraction and visualization."] },
-  { icon: "bolt", grad: "g-sky", meta: "06/2022 – 09/2022", title: "Electrical Engineer Intern", org: "FUMCARE",
-    teaser: "Electronics for wearable medical robots: FUM-HEXA and an exoskeleton.",
-    points: ["Assembled electronics for wearable medical robotics, including FUM-HEXA and the FUM-Exoskeleton.",
-      "Integrated sensors and microcontrollers with crimping, soldering and cable assembly.",
-      "Drew wiring and integration diagrams for power, CAN bus, motor electronics and the EMG, IMU, FSR and Raspberry Pi subsystems."] },
-  { icon: "chip", grad: "g-violet", meta: "06/2020 – 09/2020", title: "Electrical Engineer Intern", org: "RAYAN",
+    points: ["Developed a low-cost wireless motion-capture system with ICM-20948 9-axis IMUs, supporting configurable networks of 1–14 wearable nodes with ~4 h battery life.",
+      "Built and validated a gait-event detection pipeline (Butterworth filtering + peak detection) for heel-strike and toe-off from a single lower-back IMU, reaching 16–21 ms mean timing error against instrumented insoles.",
+      "Designed and trained a PyTorch CNN classifying stance/swing and single/double-support gait phases with ~85% mean accuracy on data from 14 participants.",
+      "Built a Streamlit tool for IMU feature extraction and visualization."] },
+  { icon: "bolt", grad: "g-sky", meta: "06/2022 – 09/2022 · Mashhad", title: "Electrical Engineer Intern", org: "FUM CARE, Ferdowsi University of Mashhad",
+    teaser: "System wiring and integration diagrams for wearable medical robots.",
+    points: ["Created Visio wiring and integration diagrams covering power distribution, CAN communication, motor electronics and EMG, IMU, FSR and Raspberry Pi interfaces."] },
+  { icon: "chip", grad: "g-violet", meta: "06/2020 – 09/2020 · Mashhad", title: "Electrical Engineer Intern", org: "RAYAN",
     teaser: "PCB design and an ESP32 smart-home prototype.",
-    points: ["Designed a PCB in Altium for remote device control and supported prototype testing.",
-      "Prototyped an ESP32-based TouchKey for smart-home applications."] },
+    points: ["Designed an Altium PCB for remote device control, supported prototype testing and prototyped an ESP32 TouchKey."] },
 ];
 
 const EDUCATION = [
-  { icon: "cap", grad: "g-blue", meta: "09/2024 – present · Milan", title: "M.Sc. Telecommunication Engineering", org: "Politecnico di Milano",
+  { icon: "cap", grad: "g-blue", meta: "09/2024 – 03/2027 (expected) · Milan", title: "M.Sc. Telecommunication Engineering", org: "Politecnico di Milano",
     teaser: "Specialization in Data and Signal Analysis.",
     points: ["Specialization: Data and Signal Analysis.",
-      "Student Representative for the Telecommunications Engineering Department since 09/2025.",
-      "1st Place Team Award in the Signal Processing and Learning course (12/2025)."] },
+      "Student Representative, Telecommunications Engineering Department (09/2025 – present).",
+      "1st Place Team Award, Signal Processing and Learning course (12/2025)."] },
   { icon: "heart", grad: "g-orange", meta: "09/2018 – 09/2023 · Mashhad", title: "B.Sc. Electrical and Biomedical Engineering", org: "Ferdowsi University of Mashhad",
     teaser: "Where the wearable and rehabilitation work started, with the FUM CARE team.",
-    points: ["Electrical and biomedical engineering, with research at FUMCARE on wearable robotics and gait analysis.",
-      "1st Place, Iraj Yazdanbakhsh Technological Award, with the FUM CARE team for FUM-HEXA (03/2023)."] },
+    points: ["Electrical and biomedical engineering, with research at FUM CARE on wearable robotics and gait analysis.",
+      "1st Place, Iraj Yazdanbakhsh Technological Award, for FUM-HEXA (03/2023).",
+      "Top 2% national ranking in the Nationwide University Entrance Exam (2018)."] },
 ];
 
 const RECOGNITION = [
-  { icon: "award", grad: "g-orange", when: "12/2025", title: "1st Place Team Award", text: "Signal Processing and Learning course, Politecnico di Milano. The prize was a place at the 6th IEEE International Symposium on Joint Communications & Sensing (JC&S 2026)." },
-  { icon: "award", grad: "g-blue", when: "03/2023", title: "1st Place, Iraj Yazdanbakhsh Technological Award", text: "Ferdowsi University of Mashhad, with the FUM CARE team for FUM-HEXA, a wearable hip exoskeleton that helps patients with walking impairments." },
-  { icon: "book", grad: "g-teal", when: "ISME 2024", title: "A Gait Phase Detection System based on Peak Detection Method and Neural Network", text: "Conference paper presented at ISME 2024." },
+  { icon: "book", grad: "g-teal", when: "ISME 2024 · 09/2024", title: "A Gait Phase Detection System based on Peak Detection Method and Neural Network", text: "Conference publication on detecting gait phases from a wearable IMU." },
+  { icon: "award", grad: "g-orange", when: "12/2025", title: "1st Place Team Award", text: "Signal Processing and Learning course, Politecnico di Milano. Invited to the 6th IEEE Symposium on Joint Communications & Sensing." },
+  { icon: "award", grad: "g-blue", when: "03/2023", title: "1st Place, Iraj Yazdanbakhsh Technological Award", text: "Ferdowsi University of Mashhad, for FUM-HEXA, a wearable hip exoskeleton for gait rehabilitation." },
+  { icon: "chart", grad: "g-violet", when: "2018", title: "Top 2% National Ranking", text: "Nationwide University Entrance Exam." },
 ];
 
 const PROJECTS = [
-  { f: 1, img: "assets/img/aoa.webp", tag: "RF / SDR", title: "Angle of arrival with PlutoSDR", sub: "Real-time direction finding",
-    desc: "Estimates where a signal comes from using LTE SRS correlation on two coherent receive channels, with splitter-based phase calibration and a live GUI.", result: "Real-time GUI", repo: "rf-aoa-localization" },
+  { f: 1, img: "assets/img/aoa.webp", tag: "RF / SDR", title: "Direction of arrival with PlutoSDR", sub: "RESTART Lab, Politecnico di Milano",
+    desc: "Real-time two-antenna direction finding with a PlutoSDR and a Raspberry Pi, using LTE SRS correlation, hardware phase calibration and a live Qt display.", result: "Angle error below 0.1°", repo: "rf-aoa-localization" },
   { f: 1, icon: "heart", grad: "g-rose", tag: "IoMT", title: "Wireless heart-sound monitor", sub: "Internet of Medical Things lab · team project",
     desc: "I designed the carrier PCB for an Arduino Nano ESP32 and SEN-14262 sensor, then implemented and compared Serial, BLE, Wi-Fi UDP and Wi-Fi TCP streaming of heart sounds at 500 Hz.", result: "BLE 306 mW vs Wi-Fi 600 mW", url: "https://github.com/MobinKhatib/IoMT_Phonocardiography", linkText: "Team repo ↗" },
   { f: 1, icon: "body", grad: "g-blue", tag: "Wearables", title: "Wireless IMU motion capture", sub: "Low-cost skeletal tracking",
@@ -123,14 +129,13 @@ const PROJECTS = [
 ];
 
 const SKILLS = [
-  { icon: "chip", grad: "g-blue", title: "Embedded systems", chips: ["STM32", "ESP32", "nRF5340", "Zephyr RTOS", "Arduino", "Raspberry Pi"] },
-  { icon: "bolt", grad: "g-orange", title: "Hardware & PCB", chips: ["Altium", "Sensor integration", "Soldering", "Wiring diagrams"] },
-  { icon: "wifi", grad: "g-teal", title: "Protocols", chips: ["I2C", "SPI", "CAN", "BLE", "Wi-Fi", "USB", "LoRa", "MQTT"] },
-  { icon: "wave", grad: "g-rose", title: "Signal processing", chips: ["sEMG", "PPG", "IMU", "RF / SDR", "Sensor fusion", "Time series"] },
-  { icon: "neural", grad: "g-violet", title: "Machine learning", chips: ["PyTorch", "TensorFlow", "scikit-learn", "OpenCV", "MediaPipe"] },
-  { icon: "code", grad: "g-sky", title: "Languages & tools", chips: ["C / C++", "Python", "MATLAB", "SQL", "Git", "Linux", "GitHub Actions"] },
-  { icon: "eye", grad: "g-teal", title: "Edge AI & FPGA", chips: ["FPGA", "HLS", "hls4ml", "Local LLMs"] },
-  { icon: "globe", grad: "g-orange", title: "Languages spoken", chips: ["Persian · native", "English · fluent", "Italian · A2"] },
+  { icon: "chip", grad: "g-blue", title: "Embedded & edge AI", chips: ["STM32", "Zephyr RTOS", "ESP32", "Arduino", "Raspberry Pi", "FPGA", "HLS", "hls4ml", "Arm CryptoCell"] },
+  { icon: "wave", grad: "g-rose", title: "Signal processing", chips: ["EMG", "PPG", "EDA", "IMU", "RF / SDR", "Sensor fusion"] },
+  { icon: "neural", grad: "g-violet", title: "AI & ML", chips: ["PyTorch", "TensorFlow", "scikit-learn", "OpenCV"] },
+  { icon: "code", grad: "g-sky", title: "Programming", chips: ["C / C++", "Python", "MATLAB", "SQL", "Qt", "Streamlit"] },
+  { icon: "bolt", grad: "g-orange", title: "Hardware & tools", chips: ["Altium", "Fusion 360", "Git", "Linux", "pytest"] },
+  { icon: "wifi", grad: "g-teal", title: "Protocols", chips: ["I2C", "SPI", "CAN", "UART", "USB", "BLE", "LoRa", "ZigBee", "MQTT", "TCP/UDP"] },
+  { icon: "globe", grad: "g-orange", title: "Languages", chips: ["English · fluent", "Italian · A2", "Persian · native"] },
 ];
 
 // ---------- Render ----------

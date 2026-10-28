@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mostafa Moazen | Embedded &amp; Wearable Engineer</title>
+<meta name="description" content="Mostafa Moazen, embedded engineer in Milan building wearable devices, biosignal pipelines and edge AI.">
+<meta property="og:title" content="Mostafa Moazen | Embedded &amp; Wearable Engineer">
+<meta property="og:description" content="Wearable sensing, biosignals and edge AI. M.Sc. Telecommunications, Politecnico di Milano.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://momobuilds.github.io/assets/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#eef4fb">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23ff6b2c'/%3E%3Cpath d='M5 17h5l3-8 4 15 3-9 2 2h5' fill='none' stroke='white' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="wallpaper" id="wallpaper" aria-hidden="true"></div>
+
+<header class="site-header">
+  <nav class="navbar" aria-label="Primary">
+    <a class="nav-pill" href="resume.html">Resume</a>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a class="desk" href="#now">Now</a>
+      <a class="desk" href="#experience">Experience</a>
+      <a class="desk" href="#education">Education</a>
+      <a class="desk" href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="hero" id="home" aria-label="Mostafa Moazen">
+    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-content">
+      <img class="avatar" src="assets/img/mostafa.webp" width="168" height="168" alt="Portrait of Mostafa Moazen">
+      <p class="hero-kicker">Milan, Italy · M.Sc. at Politecnico di Milano</p>
+      <h1 class="hero-name">Hi, I'm Mostafa Moazen</h1>
+      <p class="hero-role">I am <span class="type-a">an</span> <strong id="typer">Embedded Engineer</strong><span class="caret" aria-hidden="true">_</span></p>
+      <p class="hero-summary">I design wearable and biomedical sensing systems. I take a signal from the electrode or the IMU, through the firmware, and all the way to the model that makes sense of it.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#now">Selected work</a>
+        <a class="btn btn-ghost" href="resume.html">Resume</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/mo-moazen-46649220a/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn btn-ghost" href="https://github.com/momobuilds" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <a class="scroll-cue" href="#now" aria-label="Scroll to current work"><span></span></a>
+  </section>
+
+  <section class="section" id="now" aria-labelledby="now-h">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2 id="now-h">What I'm building now</h2>
+        <p class="section-sub">Embedded Engineer Intern at LWT3 · 07/2026 – present</p>
+        <p class="section-lead">I work on Wings, a wireless surface-EMG system. My job is to make sure the firmware measures what it claims to, and to move the signal processing onto the device.</p>
+      </div>
+
+      <article class="showcase reveal">
+        <div class="showcase-media">
+          <canvas id="emg-canvas" aria-label="Animated example of an sEMG processing pipeline: raw signal, filtered signal and activation envelope"></canvas>
+          <div class="showcase-legend"><span><i class="l-raw"></i>Raw sEMG</span><span><i class="l-filt"></i>Band-pass + notch</span><span><i class="l-env"></i>Activation envelope</span></div>
+        </div>
+        <div class="showcase-copy">
+          <span class="pill">Edge sEMG pipeline</span>
+          <h3>From noisy electrodes to muscle activation, on the device</h3>
+          <p>A real-time processing chain that runs at the edge instead of on a laptop.</p>
+          <ul class="impact">
+            <li>Validate Wings firmware against the BTS FREEEMG 1000 reference system.</li>
+            <li>Band-pass and notch filtering, motion-artifact suppression and spectral analysis in real time.</li>
+            <li>Sensor fusion of sEMG, heart rate, EDA and PPG to predict fatigue.</li>
+          </ul>
+          <div class="tags"><span>Zephyr RTOS</span><span>nRF5340</span><span>ADS1298</span><span>BLE</span><span>Python</span></div>
+        </div>
+      </article>
+
+      <div class="case-grid" id="case-grid"></div>
+    </div>
+  </section>
+
+  <section class="section" id="experience" aria-labelledby="exp-h">
+    <div class="container">
+      <div class="section-head reveal"><h2 id="exp-h">Experience</h2><p class="section-sub">Select a card to read more.</p></div>
+      <div class="card-grid" id="exp-grid"></div>
+    </div>
+  </section>
+
+  <section class="section" id="education" aria-labelledby="edu-h">
+    <div class="container">
+      <div class="section-head reveal"><h2 id="edu-h">Education</h2></div>
+      <div class="card-grid two" id="edu-grid"></div>
+    </div>
+  </section>
+
+  <section class="section" id="recognition" aria-labelledby="rec-h">
+    <div class="container">
+      <div class="section-head reveal"><h2 id="rec-h">Awards &amp; publication</h2></div>
+      <div class="rec-grid" id="rec-grid"></div>
+    </div>
+  </section>
+
+  <section class="section" id="projects" aria-labelledby="proj-h">
+    <div class="container">
+      <div class="section-head reveal"><h2 id="proj-h">Projects</h2><p class="section-sub">Code for each one is on GitHub.</p></div>
+      <div class="project-grid" id="project-grid"></div>
+      <div class="center"><button class="btn btn-primary" id="more-btn" type="button" aria-expanded="false">Show all projects</button></div>
+    </div>
+  </section>
+
+  <section class="section" id="skills" aria-labelledby="skills-h">
+    <div class="container">
+      <div class="section-head reveal"><h2 id="skills-h">Skills</h2></div>
+      <div class="skill-grid" id="skill-grid"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer" id="contact">
+  <div class="container footer-inner reveal">
+    <h2>Let's build something that measures.</h2>
+    <p>I'm open to embedded, wearable and biomedical engineering roles. Email is the fastest way to reach me.</p>
+    <div class="mail-row">
+      <span class="mail" id="mail">mostafa.moazenkakhki@mail.polimi.it</span>
+      <button class="btn btn-white" id="copy-btn" type="button">Copy email</button>
+    </div>
+    <div class="socials">
+      <a href="mailto:mostafa.moazenkakhki@mail.polimi.it">Email</a>
+      <a href="https://www.linkedin.com/in/mo-moazen-46649220a/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/momobuilds" target="_blank" rel="noopener">GitHub</a>
+      <a href="resume.html">Resume</a>
+    </div>
+    <p class="copyright">© <span id="year">2026</span> Mostafa Moazen · Milan, Italy</p>
+  </div>
+</footer>
+
+<div class="modal" id="modal" hidden>
+  <div class="modal-bg" data-close></div>
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1">
+    <button class="modal-x" type="button" data-close aria-label="Close">×</button>
+    <div class="modal-media" id="modal-media"></div>
+    <div class="modal-body">
+      <p class="modal-meta" id="modal-meta"></p>
+      <h3 id="modal-title"></h3>
+      <p class="modal-org" id="modal-org"></p>
+      <ul id="modal-list"></ul>
+      <div class="modal-nav">
+        <button class="btn btn-ghost" type="button" id="modal-prev">← Previous</button>
+        <span id="modal-count"></span>
+        <button class="btn btn-ghost" type="button" id="modal-next">Next →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

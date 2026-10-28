@@ -15,7 +15,7 @@
   .resume header { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; align-items: end; padding-bottom: 22px; border-bottom: 3px solid; border-image: linear-gradient(90deg, var(--orange), var(--blue)) 1; }
   .resume h1 { font-size: clamp(30px, 5vw, 42px); font-weight: 800; }
   .resume .role { margin: 6px 0 0; color: var(--blue); font-weight: 700; }
-  .resume .contact { font: 500 13px var(--mono); color: var(--muted); text-align: right; display: grid; gap: 2px; }
+  .resume .contact { font: 500 13px var(--mono); color: var(--muted); text-align: left; display: grid; gap: 2px; }
   .resume h2 { font-size: 14px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--orange-dark); margin: 32px 0 12px; }
   .resume p { margin: 0; color: var(--ink-2); }
   .entry { margin-bottom: 18px; }
@@ -24,6 +24,7 @@
   .entry .org { color: var(--muted); font-weight: 600; }
   .entry .date { font: 500 12.5px var(--mono); color: var(--blue); white-space: nowrap; }
   .entry ul { margin: 6px 0 0; padding-left: 20px; color: var(--ink-2); display: grid; gap: 4px; }
+  .plain { margin: 0; padding-left: 20px; color: var(--ink-2); display: grid; gap: 6px; }
   .skills-table { display: grid; grid-template-columns: max-content 1fr; gap: 6px 18px; }
   .skills-table dt { font-weight: 700; }
   .skills-table dd { margin: 0; color: var(--ink-2); }
@@ -44,89 +45,70 @@
   <header>
     <div>
       <h1>Mostafa Moazen</h1>
-      <p class="role">Embedded Engineer · M.Sc. Telecommunications, Politecnico di Milano</p>
+      <p class="role">Embedded Engineer · STM32 &amp; Sensor Integration · M.Sc. Student at Politecnico di Milano</p>
     </div>
     <div class="contact">
       <span>Milan, Italy</span>
       <span>mostafa.moazenkakhki@mail.polimi.it</span>
-      <a href="https://github.com/momobuilds">github.com/momobuilds</a>
-      <a href="https://www.linkedin.com/in/mo-moazen-46649220a/">linkedin.com/in/mo-moazen</a>
+      <a href="https://www.linkedin.com/in/mo-moazen-46649220a/">LinkedIn</a>
+      <a href="https://github.com/momobuilds">GitHub</a>
     </div>
   </header>
 
-  <h2>Summary</h2>
-  <p>Embedded engineer and M.Sc. Telecommunications Engineering student with hands-on experience in firmware validation, STM32/ESP32 systems, sensor acquisition, wearable devices, signal processing, sensor fusion, edge processing, PCB design and applied deep learning.</p>
+  <h2>Education</h2>
+  <div class="entry">
+    <div class="top"><h3>M.Sc. in Telecommunication Engineering <span class="org">· Politecnico di Milano</span></h3><span class="date">09/2024 – 03/2027 (expected) · Milan</span></div>
+    <ul><li>Specialization in Data and Signal Analysis.</li><li>Student Representative, Telecommunications Engineering Department (09/2025 – present).</li></ul>
+  </div>
+  <div class="entry">
+    <div class="top"><h3>B.Sc. in Electrical and Biomedical Engineering <span class="org">· Ferdowsi University of Mashhad</span></h3><span class="date">09/2018 – 09/2023 · Mashhad</span></div>
+  </div>
 
   <h2>Experience</h2>
   <div class="entry">
-    <div class="top"><h3>Embedded Engineer Intern <span class="org">· LWT3, Milan</span></h3><span class="date">07/2026 – present</span></div>
-    <ul>
-      <li>Test and validate Wings firmware using the BTS FREEEMG 1000 as a reference.</li>
-      <li>Develop a real-time edge sEMG pipeline for band-pass/notch filtering, motion-artifact suppression, muscle-activation estimation and spectral analysis.</li>
-      <li>Develop a multimodal sensor-fusion pipeline combining sEMG, heart rate, EDA and PPG for fatigue prediction.</li>
-    </ul>
+    <div class="top"><h3>Embedded Engineer Intern <span class="org">· LWT3</span></h3><span class="date">07/2026 – present · Milan</span></div>
+    <ul><li>Develop real-time edge sEMG processing with band-pass/notch filtering, motion-artifact suppression and spectral analysis.</li><li>Develop a multimodal sensor-fusion pipeline combining sEMG, heart rate, EDA and PPG for fatigue prediction and physiological state estimation.</li><li>Enabled Arm CryptoCell hardware acceleration for AES, SHA and ECC, improving cryptographic performance and security on the embedded target.</li></ul>
   </div>
   <div class="entry">
-    <div class="top"><h3>Embedded Engineer <span class="org">· InVox and BEA Band projects, Milan</span></h3><span class="date">04/2026 – present</span></div>
-    <ul>
-      <li>InVox: built the first data-acquisition prototype with 2 EMG sensors, 2 IMUs and an STM32 NUCLEO-U575ZI-Q.</li>
-      <li>BEA Band: miniaturizing a wearable prototype with heart-rate, temperature, IMU and sweat sensors in Altium.</li>
-    </ul>
+    <div class="top"><h3>Student Researcher <span class="org">· RESTART Lab, Politecnico di Milano</span></h3><span class="date">02/2026 – 07/2026 · Milan</span></div>
+    <ul><li>Built a real-time two-antenna direction-of-arrival (DoA) estimation system using a PlutoSDR and a Raspberry Pi.</li><li>Achieved an angle error below 0.1° in lab tests after hardware phase calibration.</li><li>Developed a live Qt application to display direction estimates and automatically reject low-quality signals.</li></ul>
   </div>
   <div class="entry">
-    <div class="top"><h3>Research Assistant <span class="org">· FUMCARE</span></h3><span class="date">02/2021 – 03/2024</span></div>
-    <ul>
-      <li>Developed a low-cost wireless 9-axis IMU motion-capture system (ICM-20948) supporting 1–14 wearable nodes with about 4 hours of battery life.</li>
-      <li>Validated IMU-based gait-event detection from a single lower-back sensor, with mean timing errors of 16–21 ms against instrumented-insole ground truth.</li>
-      <li>Trained a PyTorch CNN to classify gait phases with about 85% mean accuracy on 14 participants.</li>
-      <li>Built a Python and Streamlit pipeline for IMU feature extraction and visualization.</li>
-    </ul>
+    <div class="top"><h3>Embedded Engineer (Student Team) <span class="org">· InVox Project, Biomedical and Data Science Association, Politecnico di Milano</span></h3><span class="date">04/2026 – present · Milan</span></div>
+    <ul><li>Developed an STM32 NUCLEO-U575ZI-Q data-acquisition prototype integrating 2 EMG sensors and 2 IMUs.</li><li>Built an EMG/IMU signal-quality dashboard in Streamlit that checks each recording’s timing, noise, clipping and SNR before use.</li></ul>
   </div>
   <div class="entry">
-    <div class="top"><h3>Electrical Engineer Intern <span class="org">· FUMCARE</span></h3><span class="date">06/2022 – 09/2022</span></div>
-    <ul>
-      <li>Assembled electronics for wearable medical robotics, including FUM-HEXA and FUM-Exoskeleton.</li>
-      <li>Created wiring and system-integration diagrams covering power, CAN bus, motors, EMG, IMU, FSR and Raspberry Pi subsystems.</li>
-    </ul>
+    <div class="top"><h3>Embedded Engineer (Student Team) <span class="org">· BEA Band Project, Biomedical Engineering Association, Politecnico di Milano</span></h3><span class="date">04/2026 – present · Milan</span></div>
+    <ul><li>Miniaturizing a wearable prototype integrating heart-rate, temperature, IMU and sweat sensors on a custom Altium PCB; designed its 3D wristband enclosure in Fusion 360.</li></ul>
   </div>
   <div class="entry">
-    <div class="top"><h3>Electrical Engineer Intern <span class="org">· RAYAN</span></h3><span class="date">06/2020 – 09/2020</span></div>
-    <ul>
-      <li>Designed a PCB in Altium for remote device control and prototyped an ESP32-based smart-home TouchKey.</li>
-    </ul>
-  </div>
-
-  <h2>Education</h2>
-  <div class="entry">
-    <div class="top"><h3>M.Sc. Telecommunication Engineering <span class="org">· Politecnico di Milano</span></h3><span class="date">09/2024 – present</span></div>
-    <ul><li>Specialization: Data and Signal Analysis. Student Representative, Telecommunications Engineering Department (09/2025 – present).</li></ul>
+    <div class="top"><h3>Research Assistant <span class="org">· FUM CARE, Ferdowsi University of Mashhad</span></h3><span class="date">02/2021 – 03/2024 · Mashhad</span></div>
+    <ul><li>Developed a low-cost wireless motion-capture system with ICM-20948 9-axis IMUs, supporting configurable networks of 1–14 wearable nodes with ~4 h battery life.</li><li>Built and validated a gait-event detection pipeline (Butterworth filtering + peak detection) for heel-strike and toe-off from a single lower-back IMU, reaching 16–21 ms mean timing error against instrumented insoles.</li><li>Designed and trained a PyTorch CNN classifying stance/swing and single/double-support gait phases with ~85% mean accuracy on data from 14 participants; built a Streamlit tool for IMU feature extraction and visualization.</li></ul>
   </div>
   <div class="entry">
-    <div class="top"><h3>B.Sc. Electrical and Biomedical Engineering <span class="org">· Ferdowsi University of Mashhad</span></h3><span class="date">09/2018 – 09/2023</span></div>
+    <div class="top"><h3>Electrical Engineer Intern <span class="org">· FUM CARE, Ferdowsi University of Mashhad</span></h3><span class="date">06/2022 – 09/2022 · Mashhad</span></div>
+    <ul><li>Created Visio wiring and integration diagrams covering power distribution, CAN communication, motor electronics and EMG, IMU, FSR and Raspberry Pi interfaces.</li></ul>
+  </div>
+  <div class="entry">
+    <div class="top"><h3>Electrical Engineer Intern <span class="org">· RAYAN</span></h3><span class="date">06/2020 – 09/2020 · Mashhad</span></div>
+    <ul><li>Designed an Altium PCB for remote device control, supported prototype testing and prototyped an ESP32 TouchKey.</li></ul>
   </div>
 
   <h2>Awards &amp; publication</h2>
-  <div class="entry">
-    <div class="top"><h3>1st Place Team Award <span class="org">· Signal Processing and Learning, Politecnico di Milano</span></h3><span class="date">12/2025</span></div>
-    <ul><li>Awarded attendance at the 6th IEEE International Symposium on Joint Communications &amp; Sensing (JC&amp;S 2026).</li></ul>
-  </div>
-  <div class="entry">
-    <div class="top"><h3>1st Place, Iraj Yazdanbakhsh Technological Award <span class="org">· Ferdowsi University of Mashhad</span></h3><span class="date">03/2023</span></div>
-    <ul><li>With the FUM CARE team for FUM-HEXA, a wearable hip exoskeleton.</li></ul>
-  </div>
-  <div class="entry">
-    <div class="top"><h3>A Gait Phase Detection System based on Peak Detection Method and Neural Network</h3><span class="date">ISME 2024</span></div>
-  </div>
+  <ul class="plain">
+    <li><strong>Publication:</strong> “A Gait Phase Detection System based on Peak Detection Method and Neural Network”, ISME 2024, 09/2024.</li>
+    <li><strong>1st Place Team Award</strong>, Signal Processing and Learning course, Politecnico di Milano, 12/2025. Invited to the 6th IEEE Symposium on Joint Communications &amp; Sensing.</li>
+    <li><strong>1st Place, “Iraj Yazdanbakhsh” Technological Award</strong>, FUM, 03/2023, for FUM-HEXA, a wearable hip exoskeleton for gait rehabilitation.</li>
+    <li><strong>Top 2% National Ranking</strong>, Nationwide University Entrance Exam, 2018.</li>
+  </ul>
 
-  <h2>Skills</h2>
+  <h2>Skills &amp; languages</h2>
   <dl class="skills-table">
-    <dt>Programming</dt><dd>C/C++, Python, MATLAB, SQL</dd>
-    <dt>Embedded &amp; edge AI</dt><dd>STM32, Zephyr RTOS, ESP32, Arduino, Raspberry Pi, FPGA, HLS, hls4ml, Altium</dd>
-    <dt>Protocols</dt><dd>I2C, SPI, CAN, Serial, BLE, Wi-Fi, USB, LoRa, ZigBee</dd>
-    <dt>AI &amp; data</dt><dd>PyTorch, TensorFlow, Keras, scikit-learn, OpenCV, MediaPipe</dd>
-    <dt>Signals</dt><dd>Biomedical signals, PPG, IMU, RF/SDR, feature extraction, time-series analysis, sensor fusion</dd>
-    <dt>Tools</dt><dd>Git, Linux, pytest, Jupyter, Streamlit, SQLite</dd>
-    <dt>Languages</dt><dd>Persian (native), English (fluent), Italian (A2)</dd>
+    <dt>Embedded &amp; edge AI</dt><dd>STM32, Zephyr RTOS, ESP32, Arduino, Raspberry Pi, FPGA, HLS, hls4ml, Arm CryptoCell</dd>
+    <dt>Signal processing &amp; AI</dt><dd>EMG/PPG/EDA, IMU, RF/SDR, sensor fusion, PyTorch, TensorFlow, scikit-learn, OpenCV</dd>
+    <dt>Programming &amp; tools</dt><dd>C/C++, Python, MATLAB, SQL, Qt, Streamlit, Altium, Fusion 360, Git, Linux, pytest</dd>
+    <dt>Protocols</dt><dd>I2C, SPI, CAN, UART, USB, BLE, LoRa, ZigBee, MQTT, TCP/UDP</dd>
+    <dt>Languages</dt><dd>English (fluent), Italian (A2), Persian (native)</dd>
   </dl>
 </main>
 </div>
